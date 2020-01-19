@@ -52,3 +52,13 @@ void GameData::Patch_InitializeROM(DetourMaster* master, GameVersions version)
 	printf("[Initialize ROM] Generated a total of %d bytes\n", is_size);
 	master->instructions.push_back(instructions);
 }
+
+/*
+	Skips setting the Display Mode in Direct Draw
+*/
+
+void GameData::Patch_InitializeDDRAW(DetourMaster* master, GameVersions version)
+{
+	DWORD function_entry = Versions[version]->functions.INITIALIZE_DDRAW;
+	Instructions instructions(function_entry + 0x13C);
+}

@@ -23,8 +23,13 @@ struct Parameters
 	bool fullscreen;
 };
 
-class SCXLoader
+class GameLoader
 {
 public:
 	static const unsigned int SEGAPCX_VERSION = 0;
+	static const std::string PATCH_FILE; 
+	static const std::string GAME_FILE; 
+	static const std::string PATCH_NAME;
+	static const std::string GAME_NAME;
+	static BOOL CreatePatchedGame(const std::string game_location, Parameters params);
 };
