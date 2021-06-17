@@ -151,12 +151,19 @@
     <ClInclude Include="Instructions.h" />
     <ClInclude Include="Patcher.h" />
     <ClInclude Include="PEINFO.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameData.cpp" />
     <ClCompile Include="GameLoader.cpp" />
     <ClCompile Include="Patcher.cpp" />
     <ClCompile Include="SegaPCX.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SegaPC1X.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
