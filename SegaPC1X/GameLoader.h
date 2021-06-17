@@ -9,8 +9,6 @@
 #include <algorithm>
 #include <regex>
 #include "Patcher.h"
-//#include "FileVersion.h"
-//#include "Message.h"
 #include "GameData.h"
 
 #pragma comment(lib, "Shlwapi.lib")
@@ -18,18 +16,13 @@
 #pragma comment(lib, "Kernel32.lib")
 #pragma comment(lib, "Advapi32.lib" )
 
-struct Parameters
-{
-	bool fullscreen;
-};
-
 class GameLoader
 {
 public:
-	static const unsigned int SEGAPCX_VERSION = 0;
+	static const unsigned int SEGAPCX_VERSION = 1;
 	static const std::string PATCH_FILE; 
 	static const std::string GAME_FILE; 
 	static const std::string PATCH_NAME;
 	static const std::string GAME_NAME;
-	static BOOL CreatePatchedGame(const std::string game_location, Parameters params);
+	static BOOL CreatePatchedGame(const std::string);
 };

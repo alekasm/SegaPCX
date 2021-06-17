@@ -1,11 +1,12 @@
 #include "GameData.h"
+#include <ddraw.h>
 
 std::vector<Instructions> GameData::GenerateData(PEINFO info, GameVersions version)
-{
+{	
 	DetourMaster* master = new DetourMaster(info);
 	Patch_InitializeLauncher(master, version);
 	Patch_InitializeROM(master, version);
-	Patch_InitializeDDRAW(master, version);
+	//Patch_InitializeDDRAW(master, version);
 	std::vector<Instructions> ret_ins(master->instructions);
 	delete master;
 	return ret_ins;
@@ -56,7 +57,6 @@ void GameData::Patch_InitializeROM(DetourMaster* master, GameVersions version)
 /*
 	Skips setting the Display Mode in Direct Draw
 */
-
 void GameData::Patch_InitializeDDRAW(DetourMaster* master, GameVersions version)
 {
 	DWORD function_entry = Versions[version]->functions.INITIALIZE_DDRAW;
