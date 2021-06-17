@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
+#include <conio.h>
 #include "GameLoader.h"
 
 int main(int argc, char** argv)
@@ -29,4 +30,5 @@ f_label:
 		printf("You may now run Smash.exe, it has been successfully patched!\n");
 	else
 		printf("Unfortunately Smash.exe has not been succesfully patched.\n");
+	_getch();
 }
