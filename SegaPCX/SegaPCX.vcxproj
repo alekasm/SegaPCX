@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{5A31A73D-5CF6-4B6B-8474-DDFBB2B0517D}</ProjectGuid>
-    <RootNamespace>SegaPC1X</RootNamespace>
+    <RootNamespace>SegaPCX</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>SegaPCX</ProjectName>
   </PropertyGroup>
@@ -161,7 +161,7 @@
     <ClCompile Include="SegaPCX.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="SegaPC1X.rc" />
+    <ResourceCompile Include="SegaPCX.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="icon.ico" />
