@@ -13,7 +13,7 @@
 class Patcher
 {
 public:
-	static bool CreateDetourSection(const char* filepath, PEINFO* info);
+	static bool CreateDetourSection(HANDLE hFile, PEINFO* info);
 	static bool Patch(PEINFO, std::vector<Instructions>, std::string exe_fname);
 	static DWORD GetFileOffset(PEINFO info, DWORD address);
 

@@ -19,10 +19,10 @@
 class GameLoader
 {
 public:
-	static const unsigned int SEGAPCX_VERSION = 1;
-	static const std::string PATCH_FILE; 
-	static const std::string GAME_FILE; 
+	static const unsigned int SEGAPCX_VERSION = 2;
+	static const std::string PATCH_FILE;
+	static const std::string GAME_FILE;
 	static const std::string PATCH_NAME;
 	static const std::string GAME_NAME;
-	static BOOL CreatePatchedGame(const std::string);
+	static BOOL CreatePatchedGame(HANDLE, const std::string);
 };
